@@ -2,6 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  incrementAge() {
+    this.setState({
+        age:this.state.age + 1;
+    });
+
+    if(this.state.age === 18) {
+        alert("Congrats, you have made it");
+     }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
