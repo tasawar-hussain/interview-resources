@@ -1,4 +1,4 @@
-const Persons = (props) => {
+const Person = (props) => {
   const [age, setAge] = useState(0);
 
   const incrementAge = () => {
@@ -12,20 +12,6 @@ const Persons = (props) => {
   return (
     <div>
       <button onClick={incrementAge}>my age is {age}</button>
-    </div>
-  );
-};
-
-/////////////////////////////////////////////////////////////////////
-
-const Persons = (props) => {
-  const [person, _setPerson] = useState(props);
-
-  return (
-    <div>
-      <p>
-        My name is {person.name} and my age is {person.age}
-      </p>
     </div>
   );
 };

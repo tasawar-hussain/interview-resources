@@ -73,7 +73,7 @@ function test(arr=[1,3,5,7]){
   let i;
   for (i = 0; i < arr.length; i++) {
     const log = () => {
-      console.log(arr[i] + i);
+      console.log(arr[i])
     }
     setTimeout(log, 100);
   }
@@ -83,22 +83,7 @@ test();
 // ****************************************** //
 
 
-// ****************************************** //
-function foo(arr=[3,5,7,8,9]) {
-  var result = []
-  let i;
-  for (i = 0; i < 3; i++) {
-    result.push(function bar() { console.log(arr[i]) } )
-  }
-  return result
-}
 
-const result = foo()
-
-for (var i = 0; i < 3; i++) {
-  result[i]()
-}
-// ****************************************** //
 
 
 function test() {
@@ -113,22 +98,17 @@ var myVar = 3;
 
 test();
 
-/////////////////////////////////////////////////////
-{
-  /* <ol class="list-group">
-    <li>Default value</li>
-    <li>Default value</li>
-    <li>Default value</li>
-    <li>Default value</li>
-    <li>Default value</li>
-    <li>Default value</li>
-  </ol>
-    <script>
-    var li = document.querySelectorAll('.list-group > li');
-    for (var i = 0, len = li.length; i < len; i++) {
-       li[i].addEventListener('click', function (e) {
-         e.target.innerHTML = `Item # ${i} is clicked`;
-       })
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+var b = 'b';
+
+function a() {
+  console.log('a');
 }
-    </script>  */
-}
+
+var c = function c() {
+  console.log('c');
+};

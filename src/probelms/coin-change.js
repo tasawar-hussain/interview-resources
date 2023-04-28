@@ -2,6 +2,9 @@
 
 https://jsbin.com/?js,console
 
+// stackblitz.com/edit/js-ubfwfl?devtoolsheight=33&file=index.js
+
+
 let _coins = [1, 3, 4, 5]
 let _amount = 7
 
@@ -28,18 +31,6 @@ const makeSum = (coins, amount) => {
 console.log(makeSum(_coins, _amount));
 
 
-const num_ = "0333 3374443"
-//  One zero's, Five three's, One Seven, three Four's and One three
-// 1 0, 5 3, 1 7, 3 4, 1 3
-// 10 53 17 34 13
-
-const countAndSay = (num) => {
-  console.log(num)
-  return 1053173413
-}
-console.log(countAndSay(num_))
-
-
 const makeChange = (coins, amount) => {
     const count = coins.length;
     let remainingAmount = amount;
@@ -55,6 +46,7 @@ const makeChange = (coins, amount) => {
     }
     return result
 }
+
 class Graph {
   constructor() {
     this.nodes = [];

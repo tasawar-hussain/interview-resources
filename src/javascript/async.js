@@ -1,28 +1,42 @@
-let startTime = performance.now();  //Run at the beginning of the code
-function executingAt() {
-  return (performance.now() - startTime) / 1000;
-}
+
+Promise.resolve(1)
+  .then(
+    (value) => console.log(value * 2),
+    (value) => console.log(value * 3)
+  )
+  .then(() => { throw new Error('Oh No!'); })
+  .catch((error) => 3)
+  .finally(() => console.log(4))
+  .then(console.log);
+console.log(7);
+
+/////////////////////////////////////////////////////////
+
+console.log(1);
+
+setTimeout(() => console.log(2), 0);
+
+Promise.resolve().then(() => console.log(3));
+
+Promise.resolve().then(() => setTimeout(() => console.log(4)));
+
+Promise.resolve().then(() => console.log(5));
+
+setTimeout(() => console.log(6));
+
+console.log(7);
+
+/////////////////////////////////////////////////////////
 
 async function testAsync() {
-  for (username of ["nkgokul", "BrendanEich", "gaearon"]) {
-    let userDetails = await fetch("https://api.github.com/users/" + username);
+  for (const username of ['nkgokul', 'BrendanEich', 'gaearon']) {
+    let userDetails = await fetch('https://api.github.com/users/' + username);
     let userDetailsJSON = await userDetails.json();
-    userDetailsJSON;
+    console.log(userDetailsJSON);
   }
 }
 
 testAsync();
-
-/////////////////////////////////////////////////////////////////////
-
-function fibonacci(num) {
-  if(num < 2) {
-    return num;
-
-  return fibonacci(num - 1) + fibonacci(num - 2);
-}
-console.log(fibonacci(14))
-
 
 ////////////////////////////////////////////
 
@@ -49,15 +63,3 @@ const y = () => {
 y();
 
 /////////////////
-
-
-function getBase64(file, success_cb, failure_cb) {
-  var reader = new FileReader();
-  reader.readAsDataURL(file);
-  reader.onload = function () {
-    console.log(success_cb(cb(reader.result)));
-  };
-  reader.onerror = function (error) {
-    console.log('Error: ', failure_cb(error));
-  };
-}

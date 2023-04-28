@@ -8,33 +8,6 @@
 
 // The hiker first enters a valley  units deep. Then they climb out and up onto a mountain  units high. Finally, the hiker returns to sea level and ends the hike.
 
-// Function Description
-
-// Complete the countingValleys function in the editor below.
-
-// countingValleys has the following parameter(s):
-
-// int steps: the number of steps on the hike
-// string path: a string describing the path
-// Returns
-
-// int: the number of valleys traversed
-// Input Format
-
-// The first line contains an integer , the number of steps in the hike.
-// The second line contains a single string , of characters that describe the path.
-
-// Constraints
-
-// Sample Input
-
-// 8
-// UDDDUDUU
-// Sample Output
-
-// 1
-// Explanation
-
 // If we represent _ as sea level, a step up as /, and a step down as \, the hike can be drawn as:
 
 //       /\
@@ -50,4 +23,5 @@ function countMountainsAndValleys(str) {}
 const motion = 'UUUDUUDDDDUDDDUDUU';
 
 const result = countMountainsAndValleys(motion);
-console.log(result);
+
+console.log(result); // {mountains: 2, valley: 1}
