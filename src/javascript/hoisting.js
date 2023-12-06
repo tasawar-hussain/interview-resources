@@ -45,14 +45,14 @@ var sqrt=(function(x) {
 var my_number;
 
 // *************************************** //
-function a(){
-  console.log("1")
+function a() {
+  console.log('1');
 }
 
 a();
 
-function a(){
-  console.log("2")
+function a() {
+  console.log('2');
 }
 
 a();

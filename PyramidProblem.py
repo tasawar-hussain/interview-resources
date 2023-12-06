@@ -71,7 +71,7 @@ class TriangularMesh:
         return -1
 
 
-def valdate_length(n):
+def validate_length(n):
     try:
         num = int(n)
         if num < 1:
@@ -87,7 +87,7 @@ def driver(data):
     except ValueError:
         return -1
 
-    if(not valdate_length(length)):
+    if(not validate_length(length)):
         return -1
     mesh = TriangularMesh(length)
     min_steps = mesh.bfs_shortest_path(start, end)

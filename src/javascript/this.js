@@ -1,26 +1,22 @@
-window.name = 'Paul'
-
+window.name = 'Paul';
 function Person(name) {
-  this.name = name
+  this.name = name;
 
   return {
     name: 'Mary',
     sayHello: () => {
-      console.log(`Hello ${this.name}`)
+      console.log(`Hello ${this.name}`);
     },
     sayBye: function () {
-      console.log(`Bye ${this.name}`)
+      console.log(`Bye ${this.name}`);
     },
-  }
+  };
 }
-
-const person = new Person('John')
-person.sayHello()
-person.sayBye()
-
+const person = new Person('John');
+person.sayHello();
+person.sayBye();
 
 //////////////////////////////////////////////////////////////////
-
 
 const f = () => this;
 console.log(f()); // true
@@ -72,3 +68,17 @@ fun1(); // Prints true as this method is invoked as a simple function.
 user.foo1(); // Prints false on console as foo1 is invoked as a object’s method
 
 ///////////////////////////////////////
+
+const line = {
+  x: 376,
+  y: 226,
+};
+
+function printLine() {
+  return () => {
+    console.log(this.x);
+  };
+}
+
+let myPrint = printLine().bind(line);
+myPrint();

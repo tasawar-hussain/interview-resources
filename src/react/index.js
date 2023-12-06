@@ -19,7 +19,6 @@ const Person = (props) => {
 /////////////////////////////////////////////////////////////////////
 const Message = () => {
   const [messageObj, setMessage] = useState({ message: '' });
-
   return (
     <div>
       <input

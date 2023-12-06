@@ -12,3 +12,13 @@ const shoesData= [
   [1, 4],
   [0, 4],
 ];
+
+
+const map = {};
+
+shoesData.forEach(([rightLeft, size]) => {
+  map[size] = map[size] || 0
+  rightLeft ? map[size]++ : map[size]--
+})
+
+console.log(map)

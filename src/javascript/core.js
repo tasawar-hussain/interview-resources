@@ -40,17 +40,3 @@ const str2 = new String('abc');
 console.log(typeof str1); //String
 
 console.log(str.toUpperCase());
-
-const line = {
-  x: 376,
-  y: 226,
-};
-
-function printLine() {
-  return () => {
-    console.log(this.x);
-  };
-}
-
-let myPrint = printLine().bind(line);
-myPrint();

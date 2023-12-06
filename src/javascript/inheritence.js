@@ -16,19 +16,7 @@ function Student(name, age, rollNo) {
 const data = [];
 const keys = [];
 
-const
 
-const TableHeader = data => {
-    return(
-      <tr>
-      {
-        Object.keys(data).map(k =>
-          <th key={k}>{k}</th>
-        )
-      }
-      </tr>
-    )
-}
 
 
 const TableHeader = props => {
